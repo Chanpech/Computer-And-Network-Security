@@ -1,0 +1,33 @@
+Since guardian doesn't have pyinstaller the following is the ways to compile and excute the python files:
+
+Program execution steps:
+1. python3 server_pop3.py <port>
+2. python3 client_pop3.py <ip-address> <port>
+
+Where port must be any number between the range 1023 or 49000.
+Where ip-address can be either localhost or any ip-address.
+Notes server and client port must match.
+Remove the "<" and ">" when entering in the configuration.
+
+Commands to run from client side:
+1. STAT: The server will send back the total number of email messages stored.
+2. LIST: The server will list out all the email messages stored, including the number
+    and the size of each message in bytes. The message size should the sum of both the
+    email header and the email body.
+3. RETR <X>: The server will send back email message with number X. It is up to
+    you to display the email correctly in the console of the client. For simplicity, your
+    client can simply receive the emails sent by the server, and store them locally in the
+    same folder (if you don’t display the received emails in the client, please output “the
+    client has successfully received the email, and stored it locally”).
+    *IMPORT* 
+    <X> must start be in the following range 0 to 2
+
+4. DELE <X>: The server will delete email message with number X locally.
+5. TOP <X> <n>: The server will send back the header and the first n lines of the
+    body of the email message X. Note that if the number of lines requested by the POP3
+    client is greater than the number of lines in the body, then the server sends the entire
+    message. Similar to the RETR, your client can simply receive the partial emails
+    sent by the server, and store them locally in the same folder (if you don’t display
+    the received partial emails in the client, please output “the client has successfully
+    received the partial email, and stored it locally”).
+6. QUIT: The server will terminate the conversation with the client.

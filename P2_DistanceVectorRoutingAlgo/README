@@ -1,0 +1,18 @@
+Author: Chanpech Hoeng
+Course: CS4461
+Date 12/4/2023
+
+How to deploy, compile and run your code. 
+
+This program uses a makefile to compile.
+type: 'make' to generates a div excutable binary.
+
+To run the program type: "./dv" with your desired Trace Level.
+
+TraceLevel:
+    0 will turn this off some details and timers.
+    Greater than or equal to 1 will turn will print out useful information about what is going on inside the emulation such as timer.
+
+This program will only works for node0 through node3.
+
+Although there are warning the program should run fine. 
